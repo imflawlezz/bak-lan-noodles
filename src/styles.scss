@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@import "fonts";
+@import "margins";
+
+:root {
+  --font-family-main: "Actor";
+  --font-family-secondary: "Aclonica";
+  --font-family-heading: "ADLaMDisplay";
+  --background-img-filter: rgba(0, 0, 0, 0.4);
+  --gray-color: #444141;
+  --dark-color: #1C0F0F;
+  --light-color: #EDEDED;
+  --button-color: #F15B5B;
+  --button-hover-color: #d95252;
+  --border-radius: 20px;
+
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-main), sans-serif;
+}
