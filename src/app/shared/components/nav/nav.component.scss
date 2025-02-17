@@ -1,0 +1,41 @@
+.nav {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 24px;
+  padding: 16px;
+  height: 50px;
+}
+
+.logo {
+  grid-column: 1 / span 2;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.nav-buttons {
+  grid-column: 4 / span 4;
+  font-family: var(--font-family-secondary), 'Arial', serif;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0 30px;
+}
+
+.nav-button {
+  padding: 8px 16px;
+  color: black;
+  font-size: 24px;
+  border: none;
+  margin: 0 auto;
+  transition: 0.3s ease;
+  &:hover {
+    color: var(--nav-button-hover-color);
+  }
+}
