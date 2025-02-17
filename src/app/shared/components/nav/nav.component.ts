@@ -1,14 +1,18 @@
-import { Component } from '@angular/core';
-import {RouterLink} from '@angular/router';
+import { Component, Input } from '@angular/core';
+import {RouterLink, RouterLinkActive} from '@angular/router';
+import {NgIf, NgOptimizedImage} from '@angular/common';
 
 @Component({
   selector: 'app-nav',
-  imports: [
-    RouterLink
-  ],
   templateUrl: './nav.component.html',
-  styleUrl: './nav.component.scss'
+  imports: [
+    RouterLink,
+    NgOptimizedImage,
+    NgIf,
+    RouterLinkActive
+  ],
+  styleUrls: ['./nav.component.scss']
 })
 export class NavComponent {
-
+  @Input() darkBackground: boolean = false;
 }

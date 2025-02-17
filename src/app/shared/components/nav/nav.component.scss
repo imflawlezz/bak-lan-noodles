@@ -4,6 +4,14 @@
   gap: 24px;
   padding: 16px;
   height: 50px;
+  &.dark {
+    .nav-button {
+      color: white;
+      &:hover {
+        color: var(--nav-button-hover-light-color);
+      }
+    }
+  }
 }
 
 .logo {
@@ -33,9 +41,16 @@
   color: black;
   font-size: 24px;
   border: none;
-  margin: 0 auto;
   transition: 0.3s ease;
+  text-decoration: none;
+
   &:hover {
     color: var(--nav-button-hover-color);
   }
+
+  &.active {
+    font-weight: bold;
+    border-bottom: 2px solid var(--nav-button-hover-color);
+  }
 }
+

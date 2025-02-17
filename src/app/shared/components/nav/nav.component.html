@@ -1,13 +1,14 @@
-<nav class="nav mb60">
+<nav class="nav" [class.dark]="darkBackground">
 
-  <a class="logo" [routerLink]="['']">
-    <img src="/assets/svg/logo_black.svg" alt="logo">
+  <a class="logo" [routerLink]="['/']">
+    <img *ngIf="!darkBackground" src="/assets/svg/logo_black.svg" alt="logo">
+    <img *ngIf="darkBackground" src="/assets/svg/logo_white.svg" alt="logo">
   </a>
 
   <div class="nav-buttons">
-    <a class="nav-button" [routerLink]="['menu']">Menu</a>
-    <a class="nav-button" [routerLink]="['contacts']">Contacts</a>
-    <a class="nav-button" [routerLink]="['cart']">Cart</a>
+    <a class="nav-button" [routerLink]="['/menu']" routerLinkActive="active">Menu</a>
+    <a class="nav-button" [routerLink]="['/contacts']" routerLinkActive="active">Contacts</a>
+    <a class="nav-button" [routerLink]="['/cart']" routerLinkActive="active">Cart</a>
   </div>
 
 </nav>

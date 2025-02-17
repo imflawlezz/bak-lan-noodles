@@ -5,8 +5,8 @@ import {ContactsComponent} from './features/contacts/contacts.component';
 import {CartComponent} from './features/cart/cart.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent, pathMatch: 'full' },
-  { path: 'menu', component: MenuComponent, pathMatch: 'full' },
-  { path: 'contacts', component: ContactsComponent, pathMatch: 'full' },
-  { path: 'cart', component: CartComponent, pathMatch: 'full' },
+  { path: '', component: HomeComponent },
+  { path: 'menu', component: MenuComponent},
+  { path: 'contacts', component: ContactsComponent},
+  { path: 'cart', component: CartComponent }
 ];
