@@ -1,0 +1,40 @@
+:host {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 60px 1fr auto ;
+  gap: 24px;
+  height: 100vh;
+}
+
+.image-bg {
+  grid-column: span 3;
+  grid-row: 1 / -1;
+  background-image: url('/assets/images/bg2.jpg');
+  background-color: var(--background-img-filter);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  position: sticky;
+  background-attachment: local;
+  top: 0;
+}
+
+#menu-nav {
+  grid-column: span 9;
+  grid-row: 1;
+  margin-bottom: 0;
+}
+
+#menu-heading {
+  grid-column: span 3;
+  grid-row: 2;
+  text-align: center;
+}
+
+.dishes-container {
+  grid-column: span 9;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
