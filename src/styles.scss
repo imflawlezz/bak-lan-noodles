@@ -8,9 +8,10 @@
   --background-img-filter: rgba(0, 0, 0, 0.4);
   --gray-color: #444141;
   --dark-color: #1C0F0F;
-  --light-color: #EDEDED;
+  --light-color: #FAFAFA;
   --button-color: #F15B5B;
   --button-hover-color: #d95252;
+  --nav-button-hover-color: #676767;
   --border-radius: 20px;
 
 }
@@ -25,4 +26,29 @@
 
 body {
   font-family: var(--font-family-main), sans-serif;
+}
+
+a{
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.title {
+  color: var(--dark-color);
+  text-align: left;
+  font-family: "AdLaMDisplay", sans-serif;
+  font-size: 60px;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+
+.subtitle {
+  color: var(--gray-color);
+  text-align: left;
+  font-family: "Actor", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
 }
