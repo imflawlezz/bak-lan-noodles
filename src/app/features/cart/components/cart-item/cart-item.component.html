@@ -1,1 +1,17 @@
-<p>cart-item works!</p>
+<div class="cart-item">
+  <img [src]="item.image" [alt]="item.name" class="cart-item__image">
+
+  <div class="cart-item__info">
+    <h3 class="cart-item__title">{{ item.name }}</h3>
+
+    <div class="cart-item__controls">
+      <button *ngIf="item.quantity > 1" (click)="decreaseQuantity()">-</button>
+      <span>{{ item.quantity }}</span>
+      <button (click)="increaseQuantity()">+</button>
+    </div>
+  </div>
+
+  <span class="cart-item__price">${{ totalPrice.toFixed(2) }}</span>
+
+  <button class="cart-item__remove" (click)="removeFromCart()">✖</button>
+</div>
