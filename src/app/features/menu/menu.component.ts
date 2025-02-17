@@ -2,13 +2,15 @@ import { Component } from '@angular/core';
 import {NavComponent} from '../../shared/components/nav/nav.component';
 import {DishCardComponent} from '../../shared/components/dish-card/dish-card.component';
 import {NgForOf} from '@angular/common';
+import {RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-menu',
   imports: [
     NavComponent,
     DishCardComponent,
-    NgForOf
+    NgForOf,
+    RouterOutlet
   ],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.scss'

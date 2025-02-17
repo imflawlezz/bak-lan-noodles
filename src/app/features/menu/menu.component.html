@@ -1,10 +1,10 @@
 <div class="image-bg"></div>
 
-<app-nav id="menu-nav"></app-nav>
+<app-nav id="menu-nav" [darkBackground]="false"></app-nav>
 
 <h1 class="title" id="menu-heading">Our menu</h1>
 
 <div class="dishes-container">
   <app-dish-card *ngFor="let dish of menuDishes" [dish]="dish"></app-dish-card>
 </div>
-
+<router-outlet></router-outlet>
