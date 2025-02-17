@@ -1,6 +1,6 @@
 <div class="image-bg"></div>
 
-<app-nav id="home-nav"></app-nav>
+<app-nav id="home-nav" class="mb60" [darkBackground]="false"></app-nav>
 
 <div class="mb16" id="home-heading">
   <h1 class="title">These tasty noodles are heckin' good</h1>
@@ -14,3 +14,4 @@
 <div class="offers mr30">
   <app-dish-card *ngFor="let dish of featuredDishes" [dish]="dish"></app-dish-card>
 </div>
+<router-outlet></router-outlet>
