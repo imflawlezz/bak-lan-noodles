@@ -1,17 +1,21 @@
 <div class="cart-item">
-  <img [src]="item.image" [alt]="item.name" class="cart-item__image">
+  <img src="/assets/images/shrimp.png" alt="shrimp noodles" class="cart-item__image">
 
-  <div class="cart-item__info">
-    <h3 class="cart-item__title">{{ item.name }}</h3>
+  <h3 class="cart-item__title">Shrimp Noodles</h3>
 
-    <div class="cart-item__controls">
-      <button *ngIf="item.quantity > 1" (click)="decreaseQuantity()">-</button>
-      <span>{{ item.quantity }}</span>
-      <button (click)="increaseQuantity()">+</button>
-    </div>
+  <div class="cart-item__controls">
+    <button (click)="decreaseQuantity()">
+      <img src="/assets/svg/remove.svg" alt="remove">
+    </button>
+    <span id="cart-quantity">1</span>
+    <button (click)="increaseQuantity()">
+      <img src="/assets/svg/add.svg" alt="add">
+    </button>
   </div>
 
-  <span class="cart-item__price">${{ totalPrice.toFixed(2) }}</span>
+  <span id="cart-price">$10.99</span>
 
-  <button class="cart-item__remove" (click)="removeFromCart()">✖</button>
+  <button (click)="removeFromCart()">
+    <img src="/assets/svg/delete.svg" alt="delete">
+  </button>
 </div>

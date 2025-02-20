@@ -6,25 +6,25 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./cart-item.component.scss']
 })
 export class CartItemComponent {
-  @Input() item: any; // Данные блюда
+  @Input() dish: any; // Данные блюда
   @Output() updateQuantity = new EventEmitter<{ id: number; change: number }>();
   @Output() removeItem = new EventEmitter<number>();
 
   increaseQuantity() {
-    this.updateQuantity.emit({ id: this.item.id, change: 1 });
+    this.updateQuantity.emit({ id: this.dish.id, change: 1 });
   }
 
   decreaseQuantity() {
-    if (this.item.quantity > 1) {
-      this.updateQuantity.emit({ id: this.item.id, change: -1 });
+    if (this.dish.quantity > 1) {
+      this.updateQuantity.emit({ id: this.dish.id, change: -1 });
     }
   }
 
   removeFromCart() {
-    this.removeItem.emit(this.item.id);
+    this.removeItem.emit(this.dish.id);
   }
 
   get totalPrice(): number {
-    return this.item.quantity * this.item.price;
+    return this.dish.quantity * this.dish.price;
   }
 }

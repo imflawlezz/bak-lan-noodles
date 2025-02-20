@@ -1,9 +1,25 @@
 .cart-item {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto auto auto;
   align-items: center;
   gap: 16px;
   padding: 12px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--gray-color);
+  width: 100%;
+  font-family: var(--font-family-main), sans-serif;
+
+  button {
+    width: 24px;
+    height: 24px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    background: none;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
 
   &__image {
     width: 50px;
@@ -12,59 +28,18 @@
     border-radius: 8px;
   }
 
-  &__info {
-    flex-grow: 1;
-  }
-
-  &__title {
-    font-size: 18px;
-    font-weight: 600;
-    margin: 0 0 8px;
-  }
-
   &__controls {
     display: flex;
-    align-items: center;
-    gap: 8px;
-
-    button {
-      width: 30px;
-      height: 30px;
-      border: none;
-      background: var(--primary-color);
-      color: white;
-      font-size: 18px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: 0.2s ease-in-out;
-
-      &:hover {
-        background: var(--primary-dark);
-      }
+    gap: 12px;
     }
+}
 
-    span {
-      font-size: 16px;
-      font-weight: bold;
-    }
-  }
+#cart-quantity {
+  font-size: 24px;
+  line-height: 24px;
+}
 
-  &__price {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-  }
-
-  &__remove {
-    background: none;
-    border: none;
-    font-size: 22px;
-    cursor: pointer;
-    color: red;
-    transition: 0.2s ease-in-out;
-
-    &:hover {
-      color: darkred;
-    }
-  }
+#cart-price {
+  font-family: var(--font-family-heading), sans-serif;
+  font-size: 16px;
 }
