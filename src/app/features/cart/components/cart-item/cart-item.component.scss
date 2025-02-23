@@ -4,7 +4,10 @@
   align-items: center;
   gap: 16px;
   padding: 12px;
-  border-bottom: 1px solid var(--gray-color);
+  margin-bottom: 16px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
   width: 100%;
   font-family: var(--font-family-main), sans-serif;
 
@@ -35,8 +38,9 @@
 }
 
 #cart-quantity {
-  font-size: 24px;
+  font-size: 16px;
   line-height: 24px;
+  font-family: var(--font-family-numbers), sans-serif;
 }
 
 #cart-price {

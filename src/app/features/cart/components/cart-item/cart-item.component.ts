@@ -1,30 +1,33 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CartService, CartItem } from '../../../../core/services/cart.service';
+import { DecimalPipe, NgIf, NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-cart-item',
+  standalone: true,
   templateUrl: './cart-item.component.html',
+  imports: [
+    DecimalPipe,
+    NgIf,
+    NgOptimizedImage
+  ],
   styleUrls: ['./cart-item.component.scss']
 })
 export class CartItemComponent {
-  @Input() dish: any; // Данные блюда
-  @Output() updateQuantity = new EventEmitter<{ id: number; change: number }>();
-  @Output() removeItem = new EventEmitter<number>();
+  @Input() item!: CartItem;
+
+  constructor(private cartService: CartService) {}
 
   increaseQuantity() {
-    this.updateQuantity.emit({ id: this.dish.id, change: 1 });
+    this.cartService.increaseQuantity(this.item.name);
   }
 
   decreaseQuantity() {
-    if (this.dish.quantity > 1) {
-      this.updateQuantity.emit({ id: this.dish.id, change: -1 });
-    }
+    this.cartService.decreaseQuantity(this.item.name);
   }
 
   removeFromCart() {
-    this.removeItem.emit(this.dish.id);
+    this.cartService.removeFromCart(this.item.name);
   }
 
-  get totalPrice(): number {
-    return this.dish.quantity * this.dish.price;
-  }
 }
