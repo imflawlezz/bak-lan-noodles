@@ -1,0 +1,11 @@
+<div class="cart-summary">
+  <div class="summary-total">
+    <p>Total Quantity: <span>{{ totalQuantity }}</span></p>
+    <p>Total Price: <span>${{ totalPrice | number: '1.2-2' }}</span></p>
+  </div>
+
+  <div class="summary-buttons button">
+    <button (click)="placeOrder()" [disabled]="totalQuantity === 0">Place order</button>
+    <button (click)="clearCart()" [disabled]="totalQuantity === 0">Clear cart</button>
+  </div>
+</div>

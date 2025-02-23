@@ -1,0 +1,16 @@
+<div class="dialog-container">
+  <h3>Order placement</h3>
+  <input type="text" [(ngModel)]="name" placeholder="First Name">
+  <input type="text" [(ngModel)]="surname" placeholder="Last Name">
+  <input type="text" [(ngModel)]="address" placeholder="Delivery address">
+
+  <select [(ngModel)]="paymentMethod">
+    <option value="card">Card</option>
+    <option value="cash">Cash</option>
+  </select>
+
+  <div class="dialog-actions">
+    <button (click)="cancel()">Cancel</button>
+    <button (click)="submitOrder()">Place order</button>
+  </div>
+</div>
