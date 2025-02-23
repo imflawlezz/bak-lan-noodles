@@ -11,8 +11,8 @@
       <span class="dish-price">${{ dish.price }}</span>
 
       <button class="add-to-cart" [class.in-cart]="isInCart()" (click)="toggleCart()">
-        <img *ngIf="!isInCart()" ngSrc="/assets/svg/cart.svg" alt="Add to Cart" height="24" width="24">
-        <img *ngIf="isInCart()" ngSrc="/assets/svg/done.svg" alt="Added" height="24" width="24">
+        <img *ngIf="!isInCart()" src="/assets/svg/cart.svg" alt="Add to Cart" height="24" width="24">
+        <img *ngIf="isInCart()" src="/assets/svg/done.svg" alt="Added" height="24" width="24">
       </button>
 
     </div>

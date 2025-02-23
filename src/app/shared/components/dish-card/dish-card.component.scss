@@ -54,8 +54,9 @@
 
 .dish-price {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 400;
   color: var(--dark-color);
+  font-family: var(--font-family-numbers), sans-serif;
 }
 
 .add-to-cart {
@@ -80,7 +81,7 @@
 }
 
 .add-to-cart.in-cart {
-  background-color: var(--button-color); /* Цвет кнопки при добавлении */
+  background-color: var(--button-color);
   border-color: var(--light-color);
 }
 
