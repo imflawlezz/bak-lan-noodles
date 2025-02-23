@@ -1,0 +1,80 @@
+.dialog-container {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: var(--font-family-numbers), serif;
+
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  p {
+    font-size: 16px;
+    color: #444;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+
+    &:focus {
+      border-color: var(--button-color);
+    }
+  }
+
+  select {
+    appearance: none;
+    background: #fff url('/assets/svg/arrow-down.svg') no-repeat right 12px center;
+    background-size: 16px;
+  }
+
+  .dialog-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+
+    button {
+      flex: 1;
+      padding: 10px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:first-child {
+        background: #e0e0e0;
+        color: #333;
+
+        &:hover {
+          background: #d6d6d6;
+        }
+      }
+
+      &:last-child {
+        background: var(--button-color);
+        color: #fff;
+
+        &:hover {
+          background: var(--button-hover-color);
+        }
+      }
+    }
+  }
+}
